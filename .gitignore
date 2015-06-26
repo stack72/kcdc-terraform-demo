@@ -2,3 +2,4 @@
 .terraform
 .idea/
 *.png
+ssh/

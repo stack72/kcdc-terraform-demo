@@ -41,7 +41,7 @@ resource "aws_elb" "kcdc_elb" {
     healthy_threshold   = 2
     unhealthy_threshold = 2
     interval            = 10
-    target              = "HTTP:8080"
+    target              = "HTTP:8080/"
     timeout             = 5
   }
 }

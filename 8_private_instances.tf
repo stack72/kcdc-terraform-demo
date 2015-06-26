@@ -5,6 +5,7 @@ resource "aws_instance" "private_1" {
   security_groups = ["${aws_security_group.node.id}"]
   availability_zone = "${aws_subnet.primary-private.availability_zone}"
   key_name = "${aws_key_pair.kcdc_terraform.key_name}"
+  associate_public_ip_address = "false"
 
   tags {
     Name = "private-instance-1"
@@ -28,6 +29,7 @@ resource "aws_instance" "private_2" {
   security_groups = ["${aws_security_group.node.id}"]
   availability_zone = "${aws_subnet.secondary-private.availability_zone}"
   key_name = "${aws_key_pair.kcdc_terraform.key_name}"
+  associate_public_ip_address = "false"
 
   tags {
     Name = "private-instance-2"
@@ -59,6 +61,7 @@ resource "aws_instance" "private_3" {
   security_groups = ["${aws_security_group.node.id}"]
   availability_zone = "${aws_subnet.tertiary-private.availability_zone}"
   key_name = "${aws_key_pair.kcdc_terraform.key_name}"
+  associate_public_ip_address = "false"
 
   tags {
     Name = "private-instance-3"

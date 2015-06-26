@@ -1,0 +1,4 @@
+*.backup
+.terraform
+.idea/
+*.png

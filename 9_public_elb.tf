@@ -30,36 +30,18 @@
 	/*internal = false*/
   /*instances = ["${aws_instance.private_1.id}","${aws_instance.private_2.id}","${aws_instance.private_3.id}"]*/
 
-<<<<<<< HEAD
-  listener {
-    instance_port      = 8080
-    instance_protocol  = "tcp"
-    lb_port            = 8080
-    lb_protocol        = "tcp"
-  }
-
-  health_check {
-    healthy_threshold   = 2
-    unhealthy_threshold = 2
-    interval            = 10
-    target              = "HTTP:8080"
-    timeout             = 5
-  }
-}
-=======
   /*listener {*/
-    /*instance_port      = 80*/
+    /*instance_port      = 8080*/
     /*instance_protocol  = "tcp"*/
-    /*lb_port            = 80*/
+    /*lb_port            = 8080*/
     /*lb_protocol        = "tcp"*/
-  /*}*/
+  /*}
 
   /*health_check {*/
     /*healthy_threshold   = 2*/
     /*unhealthy_threshold = 2*/
     /*interval            = 10*/
-    /*target              = "HTTP:80"*/
+    /*target              = "HTTP:8080"*/
     /*timeout             = 5*/
   /*}*/
 /*}*/
->>>>>>> 7179b6bbf5352416ffc82048497862ad0877b3ec

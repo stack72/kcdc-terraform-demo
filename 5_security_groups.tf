@@ -1,4 +1,4 @@
-resource "aws_security_group" "node" {
+resource "aws_security_group" "kcdc_node" {
   name = "kcdc-node-sg"
   description = "Default security group that allows SSH inbound and all outbound traffic from all instances in the VPC"
   vpc_id = "${aws_vpc.default.id}"
@@ -22,7 +22,7 @@ resource "aws_security_group" "node" {
   }
 }
 
-resource "aws_security_group" "nat" {
+resource "aws_security_group" "kcdc_nat" {
   name = "kcdc-nat-sg"
   description = "Security group for nat instances that allow SSH traffic from internet"
   vpc_id = "${aws_vpc.default.id}"

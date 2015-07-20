@@ -1,7 +1,7 @@
-resource "aws_subnet" "primary-public" {
+/*resource "aws_subnet" "primary-public" {
   vpc_id = "${aws_vpc.default.id}"
 
-  cidr_block = "10.0.32.0/22"
+  cidr_block = "10.50.32.0/22"
   availability_zone = "us-west-2a"
   map_public_ip_on_launch = true
 
@@ -13,7 +13,7 @@ resource "aws_subnet" "primary-public" {
 resource "aws_subnet" "secondary-public" {
   vpc_id = "${aws_vpc.default.id}"
 
-  cidr_block = "10.0.96.0/22"
+  cidr_block = "10.50.96.0/22"
   availability_zone = "us-west-2b"
   map_public_ip_on_launch = true
 
@@ -25,7 +25,7 @@ resource "aws_subnet" "secondary-public" {
 resource "aws_subnet" "tertiary-public" {
   vpc_id = "${aws_vpc.default.id}"
 
-  cidr_block = "10.0.160.0/22"
+  cidr_block = "10.50.160.0/22"
   availability_zone = "us-west-2c"
   map_public_ip_on_launch = true
 
@@ -61,5 +61,4 @@ resource "aws_route_table_association" "secondary-public" {
 resource "aws_route_table_association" "tertiary-public" {
   subnet_id = "${aws_subnet.tertiary-public.id}"
   route_table_id = "${aws_route_table.public.id}"
-}
-
+}*/

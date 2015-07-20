@@ -24,7 +24,7 @@ resource "aws_security_group" "kcdc_elb" {
 
 resource "aws_elb" "kcdc_elb" {
   name = "kcdc-elb"
-  subnets = ["${aws_subnet.primary-private.id}","${aws_subnet.secondary-private.id}","${aws_subnet.tertiary-private.id}"]
+  subnets = ["${aws_subnet.primary-public.id}","${aws_subnet.secondary-public.id}","${aws_subnet.tertiary-public.id}"]
   security_groups = ["${aws_security_group.kcdc_elb.id}"]
   cross_zone_load_balancing = true
     internal = false
@@ -44,4 +44,8 @@ resource "aws_elb" "kcdc_elb" {
     target              = "HTTP:8080/"
     timeout             = 5
   }
+}
+
+output "elb_dns_name" {
+    value = "${aws_elb.kcdc_elb.dns_name}"
 }
